@@ -1,8 +1,4 @@
 def main():
-    # file_contents = read("books/frankenstein.txt")
-    # print(file_contents)
-    # print(countWords(file_contents))
-    # print(countCharacters(file_contents))
     report("books/frankenstein.txt")
 
 def read(path):
