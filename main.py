@@ -1,23 +1,19 @@
+from stats import countWords, countCharacters
+
+import sys
+
 def main():
-    report("books/frankenstein.txt")
+    # report("books/frankenstein.txt")
+
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+    report(sys.argv[1])
 
 def read(path):
     with open(path) as f:
         return f.read()
-    
-def countWords(text):
-    words = text.split()
-    return len(words)
-
-def countCharacters(text):
-    characters = {}
-    for t in text:
-        character = t.lower()
-        if character in characters:
-            characters[character] += 1
-        else:
-            characters[character] = 1
-    return characters
 
 def sort_on(dict):
     return dict["occurence"]
@@ -39,7 +35,7 @@ def report(path):
     list_dict.sort(reverse=True, key=sort_on)
     
     for item in list_dict:
-        print(f"The '{item["letter"]}' character was found {item["occurence"]} times")
+        print(f"{item["letter"]}: {item["occurence"]}")
 
     print("--- End report ---")
 
