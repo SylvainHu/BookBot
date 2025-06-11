@@ -3,7 +3,6 @@ from stats import countWords, countCharacters
 import sys
 
 def main():
-    # report("books/frankenstein.txt")
 
     if len(sys.argv) < 2:
         print("Usage: python3 main.py <path_to_book>")
