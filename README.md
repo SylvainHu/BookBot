@@ -16,4 +16,4 @@ A simple Python program that analyzes text files and generates reading reports. 
 3. Run the program:
 
 ```bash
-python main.py /path/to/your/book.txt
+python3 main.py /path/to/your/book.txt
